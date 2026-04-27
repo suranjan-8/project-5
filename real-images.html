@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Real-style.css">
+</head>
+<body>
+   <nav class="Real-navbar">   <a href="index.html"> <span class="Real-clinic-name">Dr Abhishek <span>Clinic</span></span></a></nav>
+   
+         <header class="Real-page-header">
+    <div class="Real-header-eyebrow">Verified Patient Gallery</div>
+    <h1>Real <em>Results</em></h1>
+    <p>Authentic patient transformations — no edits, no filters, no exceptions.</p>
+  </header>
+ 
+  <!-- ═══════════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════════ -->
+  <div class="Real-stats-bar">
+    <div class="Real-stat-item"><strong>1000+</strong><span>Procedures</span></div>
+    <div class="Real-stat-item"><strong>97%</strong><span>Satisfaction</span></div>
+    <div class="Real-stat-item"><strong>12+</strong><span>Years Experience</span></div>
+    <div class="Real-stat-item"><strong>100%</strong><span>Real Patients</span></div>
+  </div>
+ 
+  <!-- ═══════════════════════════════════════════
+       FILTER TABS
+  ═══════════════════════════════════════════ -->
+  <div class="Real-filter-bar">
+    <div class="Real-filter-tabs" role="tablist">
+      <button class="Real-filter-tab active" data-filter="all">All Results</button>
+      <button class="Real-filter-tab" data-filter="skin">Skin Care</button>
+      <button class="Real-filter-tab" data-filter="body">Body</button>
+      <button class="Real-filter-tab" data-filter="hair">Hair</button>
+      <button class="Real-filter-tab" data-filter="face">Face</button>
+    </div>
+  </div>
+ 
+  <!-- ═══════════════════════════════════════════
+       GALLERY GRID SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="Real-gallery-section" id="gallery">
+    <div class="Real-gallery-grid" id="galleryGrid">
+ 
+      <!-- Cards injected by JS below -->
+ 
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════════════════
+       BEFORE / AFTER SLIDER SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="Real-slider-section">
+    <div class="Real-slider-inner">
+ 
+      <!-- Copy side -->
+      <div class="Real-slider-copy">
+        <p class="Real-section-label">Interactive Comparison</p>
+        <h2>Drag to see the difference</h2>
+        <p>
+          Use the slider to compare before and after results side by side.
+          This patient completed a 6-month skin rejuvenation programme.
+        </p>
+        <div class="Real-slider-detail">
+          <div class="Real-detail-row">Treatment: Advanced Laser Resurfacing</div>
+          <div class="Real-detail-row">Duration: 6 months, 4 sessions</div>
+          <div class="Real-detail-row">Age group: 35–45</div>
+          <div class="Real-detail-row">Photos unretouched, same lighting conditions</div>
+        </div>
+      </div>
+ 
+      <!-- Slider widget -->
+      <div>
+        <div class="Real-ba-slider" id="baSlider">
+          <!-- Before image (bottom layer) -->
+          <img
+            src="photos/Bbefore.JPG"
+            alt="Before treatment"
+            loading="lazy"
+          />
+ 
+          <!-- After image (top layer, clipped) -->
+          <div class="Real-ba-after-wrap" id="baAfterWrap">
+            <img
+              src="photos/BAfter.png"
+              alt="After treatment"
+              loading="lazy"
+            />
+          </div>
+ 
+          <!-- Divider line -->
+          <div class="Real-ba-divider" id="baDivider"></div>
+ 
+          <!-- Handle -->
+          <div class="Real-ba-handle" id="baHandle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0b1f3a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+              <polyline points="9 6 15 12 9 18" transform="translate(6,0)"/>
+            </svg>
+          </div>
+ 
+          <span class="Real-ba-label-before">Before</span>
+     <span class=" Real-ba-label-after">After</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════════════════
+       TRUST SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="Real-trust-section">
+ 
+    <div class="Real-trust-pill">
+      <div class="Real-trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1e5fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 7l-9 9-4-4"/>
+          <circle cx="12" cy="12" r="10" stroke-dasharray="2"/>
+        </svg>
+      </div>
+      <p>All images are real patients</p>
+    </div>
+ 
+    <div class="Real-trust-pill">
+      <div class="Real-trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1e5fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <p>No filters or digital editing</p>
+    </div>
+ 
+    <div class="Real-trust-pill">
+      <div class="Real-trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1e5fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <p>Individual results may vary</p>
+    </div>
+ 
+  </div>
+ 
+  <!-- ═══════════════════════════════════════════
+       CTA SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="Real-cta-section">
+    <p class="Real-section-label">Ready to begin?</p>
+    <h2>Start your own<br/>transformation</h2>
+    <p>Book a free, no-obligation consultation with our specialist team.</p>
+    <a href="appoinment.html" class="Real-btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8"  y1="2" x2="8"  y2="6"/>
+        <line x1="3"  y1="10" x2="21" y2="10"/>
+      </svg>
+      Book Consultation
+    </a>
+  </section>
+ 
+  <!-- ═══════════════════════════════════════════
+       FOOTER NOTE
+  ═══════════════════════════════════════════ -->
+  <div class="Real-footer-note">
+    <p>All patient images are shared with full written consent. Results shown are genuine clinical outcomes. © 2025 Your Clinic. All rights reserved.</p>
+  </div>
+ 
+  <!-- ═══════════════════════════════════════════
+       LIGHTBOX MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="Real-modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="Real-modal-box" id="modalBox">
+      <button class="Real-modal-close" id="modalClose" aria-label="Close">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6"  y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="Real-modal-images" id="modalImages"></div>
+      <div class="Real-modal-footer">
+        <span class="Real-modal-caption" id="modalCaption"></span>
+        <span class="Real-modal-meta"   id="modalMeta"></span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

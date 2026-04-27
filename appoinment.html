@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clinic Appointment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,sans-serif;
+}
+
+body{
+background:#f5f9ff;
+color:#222;
+}
+
+/* SECTION */
+
+.appointment-section{
+width:100%;
+padding:100px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+/* LEFT SIDE */
+
+.appointment-info h2{
+font-size:40px;
+color:#0f3460;
+margin-bottom:18px;
+}
+
+.appointment-info p{
+line-height:1.6;
+color:#555;
+margin-bottom:35px;
+max-width:520px;
+}
+
+.trust{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.badge{
+background:white;
+padding:14px 18px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+font-size:14px;
+}
+
+.phone{
+font-weight:600;
+margin-bottom:12px;
+}
+
+.whatsapp{
+display:inline-flex;
+align-items:center;
+gap:8px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* FORM CARD */
+
+.form-card{
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:18px;
+box-shadow:0 25px 50px rgba(0,0,0,0.1);
+}
+
+/* INPUT GROUP */
+
+.form-group{
+position:relative;
+margin-bottom:20px;
+}
+
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:1px solid #ddd;
+background:#fafafa;
+font-size:14px;
+outline:none;
+}
+
+.form-group textarea{
+height:90px;
+resize:none;
+}
+
+/* FLOAT LABEL */
+
+.form-group label{
+position:absolute;
+top:50%;
+left:14px;
+transform:translateY(-50%);
+font-size:13px;
+color:#777;
+pointer-events:none;
+transition:.3s;
+background:white;
+padding:0 4px;
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:focus+label,
+.form-group textarea:not(:placeholder-shown)+label{
+top:-8px;
+font-size:11px;
+color:#2d82e8;
+}
+
+/* TREATMENT CARDS */
+
+.treatments{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-bottom:20px;
+}
+
+.treatment{
+border:1px solid #ddd;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+font-size:14px;
+transition:.25s;
+text-align:center;
+}
+
+.treatment:hover{
+border-color:#2d82e8;
+}
+
+.treatment.active{
+background:#2d82e8;
+color:white;
+border-color:#2d82e8;
+}
+
+/* BUTTON */
+
+.submit-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,#2d82e8,#1a5fad);
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:.25s;
+}
+
+.submit-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.floating-whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:22px;
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+z-index: 2;
+}
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+.appointment-section{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.appointment-info h2{
+font-size:32px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.appointment-section{
+padding:70px 6%;
+}
+
+.treatments{
+grid-template-columns:1fr;
+}
+
+.form-card{
+padding:30px 22px;
+}
+
+.appointment-info h2{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="appointment-section">
+
+<div class="appointment-info">
+
+<h2>Book Your Hair Transplant Consultation</h2>
+
+<p>
+Schedule a consultation with our specialists and receive a personalized hair restoration plan using modern techniques.
+</p>
+
+<div class="trust">
+
+<div class="badge">⭐ 5.0 Google Rating</div>
+<div class="badge">🏥 12+ Years Experience</div>
+<div class="badge">💉 150+ Successful Procedures</div>
+
+</div>
+
+<div class="phone">📞 +91 6901704248</div>
+
+<a class="whatsapp"
+href="https://wa.me/916901704248?text=Hello%20Doctor,%20I%20want%20to%20book%20a%20hair%20transplant%20consultation."
+target="_blank">
+WhatsApp Consultation
+</a>
+<a href="https://wa.me/916901704248" class="floating-whatsapp" target="_blank">
+💬  
+</a>
+
+</div>
+
+
+<div class="form-card">
+
+<form id="appointmentForm">
+
+<div class="form-group">
+<input type="text" id="name" placeholder=" " required>
+<label>Full Name</label>
+</div>
+
+<div class="form-group">
+<input type="tel" id="phone" placeholder=" " required>
+<label>Phone Number</label>
+</div>
+
+<div class="form-group">
+<input type="email" id="email" placeholder=" ">
+<label>Email Address</label>
+</div>
+
+<div class="form-group">
+<input type="date" id="date">
+<label>Preferred Appointment Date</label>
+</div>
+
+<h4 style="margin-bottom:8px">Select Treatment</h4>
+
+<div class="treatments">
+
+<div class="treatment">FUE Hair Transplant</div>
+<div class="treatment">PRP Hair Therapy</div>
+<div class="treatment">Hair Loss Consultation</div>
+<div class="treatment">Other</div>
+
+</div>
+
+<div class="form-group">
+<textarea id="message" placeholder=" "></textarea>
+<label>Your Concern</label>
+</div>
+
+<button class="submit-btn">Book Appointment</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<script>
+
+const treatments=document.querySelectorAll(".treatment")
+let selected=""
+
+treatments.forEach(card=>{
+card.onclick=()=>{
+treatments.forEach(c=>c.classList.remove("active"))
+card.classList.add("active")
+selected=card.innerText
+}
+})
+
+document.getElementById("appointmentForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+const name=document.getElementById("name").value
+const phone=document.getElementById("phone").value
+const email=document.getElementById("email").value
+const date=document.getElementById("date").value
+const msg=document.getElementById("message").value
+
+const text=
+`Appointment Request%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Email: ${email}%0A
+Date: ${date}%0A
+Treatment: ${selected}%0A
+Message: ${msg}`
+
+window.open(`https://wa.me/6901704248?text=${text}`)
+
+})
+
+</script>
+
+</body>
+</html>

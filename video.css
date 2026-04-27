@@ -1,0 +1,28 @@
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.video-card{
+  background:#fff;
+  border-radius:14px;
+  padding:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.video-card video{
+  width:100%;
+  border-radius:10px;
+}
+
+.video-card h4{
+  margin-top:12px;
+  font-size:16px;
+}
+
+.video-card p{
+  color:#64748b;
+  font-size:14px;
+}
